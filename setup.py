@@ -1,5 +1,6 @@
 """SETUPTOOLS CONFIGURATION FILE """
-# This file is used to configure the setuptools package for the pytextable project.
+# This file is used to configure the setuptools package for the pytextable
+# project.
 from setuptools import setup, find_packages
 
 # Read the long description from README.md using a 'with' statement
