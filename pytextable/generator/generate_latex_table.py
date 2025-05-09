@@ -7,14 +7,20 @@ from pytextable.utils.parse_dict import parse_dict
 from pytextable.utils.parse_dataframe import parse_dataframe
 
 
-def generate(data: Union[str, Dict[str, List[Any]], pd.DataFrame], caption: str = "", label: str = "", **kwargs) -> str: 
+def generate(data: Union[str,
+                         Dict[str,
+                              List[Any]],
+                         pd.DataFrame],
+             caption: str = "",
+             label: str = "",
+             **kwargs) -> str:
     """
     Generates a LaTeX table from the given data.
 
     Returns:
         str: A string containing the LaTeX code for the generated table.
-    
-    :param data: A 2D dictionary. 
+
+    :param data: A 2D dictionary.
     :param caption: The caption for the table.
     :param label: The label for the table.
     :param kwargs: Additional arguments for table generation.
