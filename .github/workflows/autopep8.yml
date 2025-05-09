@@ -1,7 +1,8 @@
 name: Autopep8
 
 on: [push, pull_request]
-
+permissions:
+  contents: write
 jobs:
   autopep8:
     runs-on: ubuntu-latest
@@ -18,9 +19,11 @@ jobs:
         # Run autopep8 on all Python files in the repository
         find . -name "*.py" -exec autopep8 --in-place --aggressive --aggressive {} \;
     - name: Commit changes
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Ensure the default GitHub token is referenced
       run: |
-        git config --global user.name 'github-actions'
-        git config --global user.email 'github-actions@github.com'
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
         git add .
         git diff-index --quiet HEAD || git commit -m "Apply autopep8 formatting"
-        git push https://x-access-token:${{ secrets.ACTIONS }}@github.com/tiganoviv/PyTexTable.git
+        git push
