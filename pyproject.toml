@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pytextable"
+version = "0.0.1"
+authors = [
+  { name="Vadim Tiganov", email="tiganoviv@gmail.com" },
+]
+description = "A simple Python tool to generate LaTeX tables"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/tiganoviv/pytextable"
+Issues = "https://github.com/tiganoviv/pytextable/issues"
