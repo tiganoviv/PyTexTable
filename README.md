@@ -1,15 +1,15 @@
 A simple `Python` tool that helps you to easily create and paste different tables into `.tex` documents.
 ---
 
-#### Installation:
+### Installation:
 
 ```bash
 pip install pylatextable
 ```
 
-#### []Documentation can be found in `docs/`.
+### [Documentation](https://github.com/tiganoviv/PyTexTable/blob/main/docs/documentation.md) can be found in `docs/`.
 
-#### Examples
+### Examples
 #TODO
 
-#### More usage examples can be found in `examples/`.
+### More [usage examples](https://github.com/tiganoviv/PyTexTable/blob/main/examples/examples.md) can be found in `examples/`.
