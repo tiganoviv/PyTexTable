@@ -1,0 +1,26 @@
+name: Autopep8
+
+on: [push, pull_request]
+
+jobs:
+  autopep8:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.11'
+    - name: Install autopep8
+      run: pip install autopep8
+    - name: Run autopep8
+      run: |
+        # Run autopep8 on all Python files in the repository
+        find . -name "*.py" -exec autopep8 --in-place --aggressive --aggressive {} \;
+    - name: Commit changes
+      run: |
+        git config --global user.name 'github-actions'
+        git config --global user.email 'github-actions@github.com'
+        git add .
+        git diff-index --quiet HEAD || git commit -m "Apply autopep8 formatting"
+        git push
