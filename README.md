@@ -13,4 +13,3 @@ pip install pylatextable
 #TODO
 
 ### More [usage examples](https://github.com/tiganoviv/PyTexTable/blob/main/examples/examples.md) can be found in `examples/`.
-.
